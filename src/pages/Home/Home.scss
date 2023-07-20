@@ -1,0 +1,18 @@
+.caroselSection{
+    position: relative;
+    margin-bottom: 50px;
+
+
+    & > .contentWrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .caresolTitle{
+        color: white;
+        font-size: 24px;
+        
+    }
+}
