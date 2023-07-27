@@ -10,7 +10,9 @@ import CircleRating from '../circleRating/CircleRating'
 import Genres from '../genres/Genres'
 
 
-const Carousel = ({ data, loading, endPoint }) => {
+const Carousel = ({ data, loading, endPoint , title  }) => {
+
+  console.log(title)
   
 
   const navigate = useNavigate()
@@ -79,6 +81,7 @@ return (
   <div className='carousel'>
     <ContentWrapper>
 
+    {title ? <div className='carouselTitle'>{title}</div> : "" }
       <AiFillCaretLeft style={{ color: 'red' }}
         className="carouselLeftNav arrow"
         onClick={()=>navigation('left')}

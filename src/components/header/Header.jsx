@@ -15,6 +15,7 @@ const Header = () => {
 
 
   const [mobileMenu, setMobileMenu] = useState(false)
+  const [query, setQuery] = useState("")
 
   const [lastScrollY, setLastScrollY] = useState(0)
   console.log(lastScrollY)
@@ -106,6 +107,7 @@ const Header = () => {
                 type="text"
                 placeholder="Search for a movie or tv show...."
                 onKeyUp={searchQueryHandler}
+                onChange={(e) => setQuery(e.target.value)}
               />
               <FiXCircle onClick={() => setShowSearch(false)} />
             </div>
